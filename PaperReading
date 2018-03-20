@@ -29,3 +29,21 @@ Domain-adaptive deep network compression
     the fc6 layer of VGG19 can be compressed more than 4x more than using truncated SVD alone
     增加5%-20%的压缩程度，在几乎无损精度的情况下。
     
+ShiftCNN: Generalized Low-Precision Architecture for Inference of Convolutional Neural Networks
+
+    arxiv: https://arxiv.org/abs/1706.02393
+    github: https://github.com/gudovskiy/ShiftCNN
+    
+    Main:(低精度近似，未认真读）
+    ShiftCNN基于两权的权重表示，因此仅执行移位和加法操作。此外，ShiftCNN通过预先计算卷积项大大降低了卷积层的计算成本。
+    可用于具有相对较小的权重的任何CNN架构，并允许至少降低两个数量级。不需要重训练，可以直接进行转化且错误率控制在1%。
+
+Ultimate tensorization: compressing convolutional and FC layers alike
+
+    intro: NIPS 2016 workshop: Learning with Tensors: Why Now and How?
+    arxiv: https://arxiv.org/abs/1611.03214
+    github: https://github.com/timgaripov/TensorNet-TF
+    
+    Main:
+    对卷积核进行分解。
+    压缩包括卷积层和全连接层，达到80x的压缩比，而精度损失1.1%

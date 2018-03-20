@@ -12,3 +12,20 @@ Reducing Deep Network Complexity with Fourier Transform Methods
     Test envirionment: benchmark
     Test datasets: MNIST, CIFAR10, CIFAR100
     Test model： 傅立叶变换所有的训练和测试数据集，并使用一个完全连接的双层密集神经元网络模型和一个隐藏单元
+
+Domain-adaptive deep network compression
+
+    intro: ICCV 2017
+    arxiv: https://arxiv.org/abs/1709.01041
+    github: https://github.com/mmasana/DALR
+    
+    Main:
+    在大数据集上训练的深度神经网络可以通过称为微调（fine-tuning）的过程，轻松的转移到新的域中，而标记实例的数量会少得多。
+    //预训练的模型可以用在识别更少的标签数量的数据集当中。
+    域名转换会导致网络激活的巨大转变，并且在压缩时需要考虑到这一点。证明考虑activation statistics（激活统计）时，压缩权重会导致封闭形式的解决方式的秩约束回归问题
+    使用本文中提出的DALR（Domain Adaptive Low Rank (DALR)，可以更好的消除权重中的冗余。
+    //考虑在将预训练模型转移到新的较小的类别的数据集中时，使用一种“域自适应低阶压缩”技术（低阶逼近技术），考虑到转移到另一个域时所发生的激活统计的转变。
+    Test results：
+    the fc6 layer of VGG19 can be compressed more than 4x more than using truncated SVD alone
+    增加5%-20%的压缩程度，在几乎无损精度的情况下。
+    

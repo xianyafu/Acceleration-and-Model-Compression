@@ -1,0 +1,14 @@
+Reducing Deep Network Complexity with Fourier Transform Methods
+
+    intro: Harvard University
+    arxiv: https://arxiv.org/abs/1801.01451
+    github: https://github.com/andrew-jeremy/Reducing-Deep-Network-Complexity-with-Fourier-Transform-Method
+    
+    Main:uses shallow densely connected neuron network architectures
+    通过对输入进行傅立叶变换，训练样本中的每个点都具有来自于所有其他点的所有加权信息的表示能量。
+    （对输入进行变换，而非卷积核）。将输入图片看成2D正交奇函数的加权，并使用完全链接的单层网络来替代输出（训练和推测类别），不再需要conv和pool层
+    降低神经网络的复杂度，减少计算负担并提高对大量训练样例的要求以实现高分类的精度（>98%）
+    //需要大量存储空间来存储图像傅立叶变换的结果。基本上相当于一种新的方法，和CNN关系不那么大。
+    Test envirionment: benchmark
+    Test datasets: MNIST, CIFAR10, CIFAR100
+    Test model： 傅立叶变换所有的训练和测试数据集，并使用一个完全连接的双层密集神经元网络模型和一个隐藏单元
